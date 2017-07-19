@@ -1,7 +1,7 @@
 
 # Neural Network implementation
 
-In this project, I've built build my first neural network, in order to use it to predict daily bike rental ridership. 
+In this project, I'll build my first neural network, in order to use it to predict daily flow of a bike rental shop. 
 
 
 
