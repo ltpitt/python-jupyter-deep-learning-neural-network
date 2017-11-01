@@ -1,7 +1,7 @@
 
 # Neural Network implementation
 
-In this project, I'll build my first neural network, in order to use it to predict daily flow of a bike rental shop. 
+In this project, I've built my first neural network, in order to use it to predict daily flow of a bike rental shop. 
 
 
 
@@ -441,13 +441,13 @@ The network has two layers, a hidden layer and an output layer. The hidden layer
 
 We use the weights to propagate signals forward from the input to the output layers in a neural network. We use the weights to also propagate error backwards from the output back into the network to update our weights. This is called *backpropagation*.
 
-> **Hint:** You'll need the derivative of the output activation function ($f(x) = x$) for the backpropagation implementation. If you aren't familiar with calculus, this function is equivalent to the equation $y = x$. What is the slope of that equation? That is the derivative of $f(x)$.
+To do so we'll need the derivative of the output activation function ($f(x) = x$) for the backpropagation implementation. This function is equivalent to the equation $y = x$. What is the slope of that equation? That is the derivative of $f(x)$.
 
-Below, you have these tasks:
-1. Implement the sigmoid function to use as the activation function. Set `self.activation_function` in `__init__` to your sigmoid function.
-2. Implement the forward pass in the `train` method.
-3. Implement the backpropagation algorithm in the `train` method, including calculating the output error.
-4. Implement the forward pass in the `run` method.
+Below:
+1. Implemented the sigmoid function to use as the activation function. Set `self.activation_function` in `__init__` to your sigmoid function.
+2. Implemented the forward pass in the `train` method.
+3. Implemented the backpropagation algorithm in the `train` method, including calculating the output error.
+4. Implemented the forward pass in the `run` method.
   
 
 
@@ -534,7 +534,7 @@ def MSE(y, Y):
 
 ## Unit tests
 
-Run these unit tests to check the correctness of your network implementation. This will help you be sure your network was implemented correctly befor you starting trying to train it.
+Run these unit tests to check the correctness of the network implementation. This will help you be sure that the network was implemented correctly before trying to train it.
 
 
 ```python
@@ -614,18 +614,18 @@ unittest.TextTestRunner().run(suite)
 
 ## Training the network
 
-Here you'll set the hyperparameters for the network. The strategy here is to find hyperparameters such that the error on the training set is low, but you're not overfitting to the data. If you train the network too long or have too many hidden nodes, it can become overly specific to the training set and will fail to generalize to the validation set. That is, the loss on the validation set will start increasing as the training set loss drops.
+Here we set the hyperparameters for the network. The strategy here is to find hyperparameters such that the error on the training set is low, but data is not being overfitted. If we train the network too long or have too many hidden nodes, it can become overly specific to the training set and will fail to generalize to the validation set. That is, the loss on the validation set will start increasing as the training set loss drops.
 
-You'll also be using a method know as Stochastic Gradient Descent (SGD) to train the network. The idea is that for each training pass, you grab a random sample of the data instead of using the whole data set. You use many more training passes than with normal gradient descent, but each pass is much faster. This ends up training the network more efficiently. You'll learn more about SGD later.
+We are also using a method know as Stochastic Gradient Descent (SGD) to train the network. The idea is that for each training pass, we grab a random sample of the data instead of using the whole data set. We use many more training passes than with normal gradient descent, but each pass is much faster. This ends up training the network more efficiently.  
 
 ### Choose the number of iterations
-This is the number of batches of samples from the training data we'll use to train the network. The more iterations you use, the better the model will fit the data. However, if you use too many iterations, then the model with not generalize well to other data, this is called overfitting. You want to find a number here where the network has a low training loss, and the validation loss is at a minimum. As you start overfitting, you'll see the training loss continue to decrease while the validation loss starts to increase.
+This is the number of batches of samples from the training data we'll use to train the network. The more iterations we use, the better the model will fit the data. However, if we use too many iterations, then the model with not generalize well to other data, this is called overfitting. We want to find a number here where the network has a low training loss, and the validation loss is at a minimum. As you start overfitting, we'll see the training loss continue to decrease while the validation loss starts to increase.
 
 ### Choose the learning rate
 This scales the size of weight updates. If this is too big, the weights tend to explode and the network fails to fit the data. A good choice to start at is 0.1. If the network has problems fitting the data, try reducing the learning rate. Note that the lower the learning rate, the smaller the steps are in the weight updates and the longer it takes for the neural network to converge.
 
 ### Choose the number of hidden nodes
-The more hidden nodes you have, the more accurate predictions the model will make. Try a few different numbers and see how it affects the performance. You can look at the losses dictionary for a metric of the network performance. If the number of hidden units is too low, then the model won't have enough space to learn and if it is too high there are too many options for the direction that the learning can take. The trick here is to find the right balance in number of hidden units you choose.
+The more hidden nodes we have, the more accurate predictions the model makes. Try a few different numbers and to see how it affects the performance. We can look at the losses dictionary for a metric of the network performance. If the number of hidden units is too low, then the model won't have enough space to learn and if it is too high there are too many options for the direction that the learning can take. The trick here is to find the right balance in number of hidden units we choose.
 
 
 ```python
@@ -686,9 +686,9 @@ _ = plt.ylim()
 ![png](output_22_0.png)
 
 
-## Check out your predictions
+## Check out predictions
 
-Here, use the test data to view how well your network is modeling the data. If something is completely wrong here, make sure each step in your network is implemented correctly.
+Here we use the test data to view how well your network is modeling the data.
 
 
 ```python
@@ -721,6 +721,3 @@ _ = ax.set_xticklabels(dates[12::24], rotation=45)
 ![png](output_24_1.png)
 
 
-## Thinking about results.
- 
-Answer these questions about your results. How well does the model predict the data? Where does it fail? Why does it fail where it does?
