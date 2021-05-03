@@ -1,3 +1,8 @@
+[![GitHub Issues](https://img.shields.io/github/issues-raw/ltpitt/python-jupyter-deep-learning-neural-network)](https://github.com/ltpitt/python-jupyter-deep-learning-neural-network/issues)
+[![Total Commits](https://img.shields.io/github/last-commit/ltpitt/python-jupyter-deep-learning-neural-network)](https://github.com/ltpitt/python-jupyter-deep-learning-neural-network/commits)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/4w/ltpitt/python-jupyter-deep-learning-neural-network?foo=bar)](https://github.com/ltpitt/python-jupyter-deep-learning-neural-network/commits)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ltpitt/python-jupyter-deep-learning-neural-network/blob/master/LICENSE)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 # Neural Network implementation
 
